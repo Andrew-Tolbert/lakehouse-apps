@@ -1,0 +1,15 @@
+command: [
+  "streamlit", 
+  "run",
+  "Home.py"
+]
+
+env:
+  - name: "DATABRICKS_WAREHOUSE_ID"
+    valueFrom: "sql-warehouse"
+  - name: "SERVING_ENDPOINT"
+    valueFrom: "serving_endpoint"
+  - name: "UPLOAD_VOLUME"
+    value: "/Volumes/ahtsa_dev/lhapps/uploads"
+  - name: STREAMLIT_BROWSER_GATHER_USAGE_STATS
+    value: "false"
